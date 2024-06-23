@@ -22,19 +22,19 @@ function App() {
           <ul>
             <li>
               <Link to="/">회원가입</Link>
-            </li>
+            </li>/
             <li>
               <Link to="/payment">결제</Link>
-            </li>
+            </li>/
             <li>
               <Link to="/refund">환불</Link>
-            </li>
+            </li>/
             <li>
               <Link to="/delete">삭제</Link>
-            </li>
+            </li>/
             <li>
               <Link to="/gift">선물</Link>
-            </li>
+            </li>/
             <li>
               <Link to="/lotto">Lotto</Link>
             </li>
