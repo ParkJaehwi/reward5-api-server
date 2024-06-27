@@ -9,6 +9,7 @@ import Refund from "./components/Refund";
 import Gift from "./components/Gift";
 import Lotto from "./components/Lotto";
 import Delete from "./components/Delete";
+import Navigation from "./components/Navigation";
 
 function App() {
   const [adminFee, setAdminFee] = useState(99999999);
@@ -18,33 +19,7 @@ function App() {
   return (
     <div className="App">
       <div className="main_left">
-        <div className="navigation">
-          <ul>
-            <li>
-              <Link to="/">회원가입</Link>
-            </li>
-            /
-            <li>
-              <Link to="/recommender">추천인</Link>
-            </li>
-            /
-            <li>
-              <Link to="/payment">결제</Link>
-            </li>
-            /
-            <li>
-              <Link to="/delete">삭제</Link>
-            </li>
-            /
-            <li>
-              <Link to="/gift">선물</Link>
-            </li>
-            /
-            <li>
-              <Link to="/lotto">Lotto</Link>
-            </li>
-          </ul>
-        </div>
+        <Navigation/>
         <div className="content">
           <Routes>
             <Route path="/" element={<Init />} />
