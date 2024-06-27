@@ -16,7 +16,8 @@ function App() {
   const [totalLotto, setTotalLotto] = useState(1000000);
 
   return (
-    <div className="App">
+    <div ng-app="application" ng-controller="AppCtrl">
+      <div className="App">
       <div className="main_left">
         <div className="navigation">
           <ul>
@@ -54,6 +55,7 @@ function App() {
       <div className="main_right">
         <Admin adminFee={adminFee} userPoint={userPoint} totalLotto={totalLotto}></Admin>
       </div>
+    </div>
     </div>
   );
 }
