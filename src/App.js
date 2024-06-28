@@ -18,9 +18,7 @@ function App() {
   const [totalLotto, setTotalLotto] = useState(1000000);
 
   return (
-    <div ng-app="application" ng-controller="AppCtrl">
-      <div className="App">
-      <div className="main_left">
+    <div className="App">
         <Navigation/>
         <div className="content">
           <Routes>
@@ -33,13 +31,10 @@ function App() {
             <Route path="/search" element={<search />} />
           </Routes>
         </div>
-      </div>
       <div className="main_right">
         <Admin adminFee={adminFee} userPoint={userPoint} totalLotto={totalLotto}></Admin>
       </div>
-    </div>
-    </div>
-  );
+    </div>);
 }
 
 export default App;

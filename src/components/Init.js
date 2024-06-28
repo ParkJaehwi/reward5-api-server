@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { initAB } from "../services/api";
-import "../App.css";
+import "./init.css";
 
 const Init = () => {
   const [id, setId] = useState("");
@@ -17,21 +17,23 @@ const Init = () => {
   };
 
   return (
-    <div className="form-group">
-      <label>회원가입</label>
-      <h5 style={{ color: "green", marginBottom: "2%" }}>{message}</h5>
-      <br />
-      ID:{" "}
-      <input
-        className="form-control"
-        type="text"
-        placeholder="ID를 입력하세요"
-        value={id}
-        onChange={(e) => setId(e.target.value)}
-      />
-      <input type="submit" value="Create" className="btn btn-primary" onClick={_onClick} />
-    </div>
+      <div className="form-group">
+        <label>회원가입</label>
+        <h5 style={{ color: "green", marginBottom: "2%" }}>{message}</h5>
+        <br />
+        ID:{" "}
+        <input
+          className="form-control"
+          type="text"
+          placeholder="ID를 입력하세요"
+          value={id}
+          onChange={(e) => setId(e.target.value)}
+        />
+
+        <input type="submit" value="Create" className="btn btn-primary" onClick={_onClick} />
+      </div>
   );
 };
 
 export default Init;
+
