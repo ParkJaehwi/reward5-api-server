@@ -7,11 +7,11 @@ import Home from "./components/Home";
 import Admin from "./components/Admin";
 import Admin_page from "./components/Admin_page";
 import Init from "./components/Init";
-import Recommender from "./components/Recommender"
 import Payment from "./components/Payment";
 import Gift from "./components/Gift";
 import Lotto from "./components/Lotto";
 import Navigation from "./components/Navigation";
+import Footer from "./components/Footer";
 
 function App() {
 const location = useLocation();
@@ -48,12 +48,13 @@ const location = useLocation();
           </Routes>
         </div>
         <div className="main_right">
-        {currentPath !== "/" && (
-        <div className="main_right">
-          <Admin data={data} />
+          {currentPath !== "/" && (
+          <div className="main_right">
+            <Admin data={data} />
+          </div>
+          )}
         </div>
-      )}
-      </div>
+        <Footer/>
       </div>
   );
 }

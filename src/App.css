@@ -4,12 +4,19 @@
   font-weight: 400;
   font-style: normal;
 }
+@font-face {
+  font-family: 'KCC-Hanbit';
+  src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/2403-2@1.0/KCC-Hanbit.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
  
 .App {
   font-family: 'Pretendard-Regular';
 }
 .content{
   display: inline-flex;
+  height: auto;
 }
 
 .main_right{
@@ -19,20 +26,21 @@
 }
 
 .home_memo{
+  font-family: 'KCC-Hanbit';
   margin-left: 3vh;
   margin-top: 10vw;
   display: inline-block;
   width: 20vw;
-  height: 50%; 
+  height: 70vh; 
   vertical-align: top; 
   text-align: center;
 }
 
 .home_memo h1{
-  font-size: 40px;
+  font-size: 2.2vw;
 }
 .home_memo h4{
-  font-size: 30px;
+  font-size: 1.5vw;
   color: #8878de;
 }
 
@@ -41,46 +49,54 @@
   flex-direction: column; 
   justify-content: center;
   align-items: center;
+  width: 55vw;
 }
  
 .form-group {
   width: 30vw;
-  padding: 20px;
-  border-radius: 8px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  padding: 1.3889vw;
+  border-radius: 0.5556vw;
+  box-shadow: 0 0 0.6944vw rgba(0, 0, 0, 0.1);
   margin: 2vh;
-  margin-left: 50vh;
+  margin-left: 20vw;
 }
 
 .form-group label {
-  font-size: 1.5em;
-  margin-bottom: 10px;
+  font-size: 1.3vw;
+  margin-bottom: 1.667vh;
   display: block;
   text-align: center;
 }
 
-.form-group h5 {
+.form-h5 {
   text-align: center;
+  color: green;
+  margin-top: 0vh;
+  margin-bottom: 0.5vh;
+  font-size: 0.8vw;
 }
 
 .form-control {
-  width: 100%;
-  padding: 10px;
-  margin: 10px 0;
-  border: 1px solid #cacaca;
-  border-radius: 4px;
+  width: 30vw;
+  padding: 0.6944vw;
+  margin: 0.6944vw 0;
+  border: 0.06944vw solid #cacaca;
+  border-radius: 0.2778vw;
   box-sizing: border-box;
+  font-size: 1vw;
 }
-
+.fontsize{
+  font-size: 1vw;
+}
 .btn {
-  width: 100%;
-  padding: 10px;
+  width: 30vw;
+  padding: 0.6944vw;
   background-color: #8878DE;
   border: none;
   color: white;
-  border-radius: 4px;
+  border-radius: 0.2778vw;
   cursor: pointer;
-  font-size: 1em;
+  font-size: 1vw;
 }
 
 .btn:hover {
@@ -96,24 +112,50 @@
   float: left;
 }
 
-.admin-main,
-.admin-footer {
-  width: 15vw;
-  padding: 20px;
-  border-bottom: 0.01vh solid rgb(170, 170, 170);
-}
+
 .admin-bt{
   width: 15vw;
-  padding: 1px;
+  padding: 0.0694vw;
   background-color: #8878de;
   border: none;
   color: white;
-  border-radius: 4px;
+  border-radius: 0.2778vw;
   cursor: pointer;
-  font-size: 1em;
+  font-size: 1vw;
 }
 .post{
   width: 75vw;
   display: inline-block;
   vertical-align: top; /* Ensure it aligns with the home_right element */
+}
+.post2{
+  width: 99.03vw;
+}
+.post3{
+  width: 99.03vw;
+  margin-top: 20vh;
+}
+.footer{
+  background-color: rgb(66, 66, 66);
+  width: 99vw;
+  height: 30vh;
+  margin-top: 32vh;
+  display: flex;
+  box-shadow: 0 0 1vw 0 rgba(0,0,0,0.3);
+}
+.footerInfo{
+  color: rgb(149, 149, 149);
+  font-size: 0.8vw;
+  margin-left: 17vw;
+  padding-top: 5vh;
+}
+.footer_p{
+  margin-top: 4vh;
+}
+.allright{
+  width: 15vw;
+  height: 15vh;
+  position: relative;
+  top: 10vh;
+  left: 20vw;
 }

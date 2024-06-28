@@ -21,8 +21,7 @@ function Payment() {
       <div class="form-group">
       <label className="form-lable">결제</label>
         <h5 className=".form-h5" style={{ color: "green", marginBottom: "2%" }}>{message}</h5>
-        <br />
-        Me:{" "}
+        <span className="fontsize">Me:{" "}</span>
         <input
           className="form-control"
           type="text"
@@ -30,8 +29,7 @@ function Payment() {
           value={id}
           onChange={(e) => setId(e.target.value)}
         />
-        <br />
-        가격:{" "}
+        <span className="fontsize">가격:{" "}</span>
         <input
           className="form-control"
           type="text"
@@ -39,8 +37,7 @@ function Payment() {
           value={price}
           onChange={(e) => setPrice(e.target.value)}
         />
-        <br />
-        사용할 포인트:{" "}
+        <span className="fontsize">사용할 포인트:{" "}</span>
         <input
           className="form-control"
           type="text"
@@ -48,7 +45,7 @@ function Payment() {
           value={point}
           onChange={(e) => setPoint(e.target.value)}
         />
-        <input id="PaymentAB" type="submit" value="결제" class="btn btn-primary" onClick={_onClick} />
+        <input id="PaymentAB" type="submit" value="결제" className="btn btn-primary" onClick={_onClick} />
       </div>
     </div>
   );

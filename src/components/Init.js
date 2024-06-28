@@ -42,9 +42,8 @@ const Init = () => {
     <div className="form-container">
       <div className="form-group">
         <label className="form-lable">회원가입</label>
-        <h5 className="form-h5" style={{ color: "green", marginBottom: "2%" }}>{message1}</h5>
-        <br />
-        ID:{" "}
+        <h5 className="form-h5">{message1}</h5>
+        <span className="fontsize">ID:{" "}</span>
         <input
           className="form-control"
           type="text"
@@ -56,10 +55,9 @@ const Init = () => {
       </div>
       
       <div class="form-group">
-        <label className=".form-lable">추천인 ID 입력</label>
-        <h5 className="form-h5" style={{ color: "green", marginBottom: "2%" }}>{message2}</h5>
-        <br />
-        사용자 ID:{" "}
+        <label className="form-lable">추천인 ID 입력</label>
+        <h5 className="form-h5">{message2}</h5>
+        <span className="fontsize">사용자 ID:{" "}</span>
         <input
           className="form-control"
           type="text"
@@ -68,7 +66,7 @@ const Init = () => {
           onChange={(e) => setMyid(e.target.value)}
         />
         
-        추천인 ID:{" "}
+        <span className="fontsize">추천인 ID:{" "}</span>
         <input
           className="form-control"
           type="text"
@@ -76,14 +74,13 @@ const Init = () => {
           value={yourId}
           onChange={(e) => setYourid(e.target.value)}
         />
-        <input id="recommender" type="submit" value="추천인 등록" class="btn btn-primary" onClick={_onClick2} />
+        <input id="recommender" type="submit" value="추천인 등록" className="btn btn-primary" onClick={_onClick2} />
       </div>
 
       <div className="form-group">
-        <label className=".form-lable">계정 삭제</label>
-        <h5 className="form-h5" style={{ color: "green", marginBottom: "2%" }}>{message3}</h5>
-        <br />
-        ID:{" "}
+        <label className="form-lable">계정 삭제</label>
+        <h5 className="form-h5">{message3}</h5>
+        <span className="fontsize">ID:{" "}</span>
         <input
           className="form-control"
           type="text"

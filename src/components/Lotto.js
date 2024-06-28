@@ -28,8 +28,7 @@ function Lotto({ data }) {
       <div className="form-group">
       <label className="form-lable">동행 복권, 행복 나눔</label>
         <h5 className=".form-h5" style={{ color: "green", marginBottom: "2%" }}>{message}</h5>
-        <br />
-        참여자 ID:{" "}
+        <span className="fontsize">참여자 ID:{" "}</span>
         <input
           className="form-control"
           type="text"

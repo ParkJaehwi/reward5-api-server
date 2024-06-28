@@ -39,12 +39,12 @@ const Admin_page = ({data}) => {
         <>
         <header className="admin-header">
             <label className="admin-bt">Admin:{" "}</label>
-            {data.map((item, index) => {
-              return item.Key === "admin" ? item.Record : null;
-            })}
-            원
-            <p></p>
-            <br />
+            <span className='fontsize'>
+              {data.map((item, index) => {
+                return item.Key === "admin" ? item.Record : null;
+              })}
+              원
+            </span>
             <label className="admin-bt">Lotto참여자:{" "}</label>
             {data.map((item, index) => {
               return item.Key === "participants" ? item.Record + ", " : null;
