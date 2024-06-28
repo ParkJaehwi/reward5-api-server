@@ -20,11 +20,11 @@ const Admin_page = ({data}) => {
   };
 
   return (
-    <div>
+    <div className="form-group">
       {!isLoggedIn ? (
         <form onSubmit={handleSubmit}>
           <div>
-            <label>비밀번호: </label>
+          <label className="form-lable">비밀번호: </label>
             <input 
               type="password" 
               value={password}

@@ -20,7 +20,7 @@ const Gift = () => {
 
   return (
     <div className="form-group">
-      <label>포인트 선물</label>
+      <label className="form-lable">포인트 선물</label>
       <h5 style={{ color: "green", marginBottom: "2%" }}>{message}</h5>
       <br />
       선물 보내는 ID:{" "}

@@ -20,8 +20,8 @@ function Recommender() {
   return (
     <div>
       <div class="form-group">
-        <label>추천인 ID 입력</label>
-        <h5 style={{ color: "green", marginBottom: "2%" }}>{message}</h5>
+      <label className="form-lable">추천인 ID 입력</label>
+        <h5 className=".form-h5" style={{ color: "green", marginBottom: "2%" }}>{message}</h5>
         <br />
         사용자 ID:{" "}
         <input

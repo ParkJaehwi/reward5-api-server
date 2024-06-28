@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from "react";
 
 function Admin({ adminFee, data, totalLotto }) {
+
+  
   return (
     <div className="admin-container">
       

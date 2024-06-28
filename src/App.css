@@ -27,10 +27,9 @@
   justify-content: center;
   align-items: center;
 }
- 
+
 .form-group {
   width: 500px;
-  margin: 200px auto;
   padding: 20px;
   border: 1px solid #ddd;
   border-radius: 8px;
@@ -39,14 +38,14 @@
   margin-left: 73vh;
 }
 
-.form-group label {
+.form-lable {
   font-size: 1.5em;
   margin-bottom: 10px;
   display: block;
   text-align: center;
 }
 
-.form-group h5 {
+.form-h5{
   text-align: center;
 }
 
@@ -62,7 +61,7 @@
 .btn {
   width: 100%;
   padding: 10px;
-  background-color: #007bff;
+  background-color: #8878de;
   border: none;
   color: white;
   border-radius: 4px;
@@ -71,5 +70,5 @@
 }
 
 .btn:hover {
-  background-color: #0056b3;
+  background-color: #6b48f7;
 }

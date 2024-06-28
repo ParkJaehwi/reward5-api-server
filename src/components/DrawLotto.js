@@ -15,7 +15,7 @@ function DrawLotto() {
 
   return (
     <div>
-      <h5 style={{ color: "green", marginBottom: "2%" }}>{message}</h5>
+      <h5 className=".form-h5" style={{ color: "green", marginBottom: "2%" }}>{message}</h5>
       <input type="submit" value="로또 추첨" className="btn btn-primary" onClick={_onClick2} />
     </div>
   )

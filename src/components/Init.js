@@ -41,8 +41,8 @@ const Init = () => {
     <>
     <div className="form-container">
       <div className="form-group">
-        <label>회원가입</label>
-        <h5 style={{ color: "green", marginBottom: "2%" }}>{message1}</h5>
+        <label className="form-lable">회원가입</label>
+        <h5 className="form-h5" style={{ color: "green", marginBottom: "2%" }}>{message1}</h5>
         <br />
         ID:{" "}
         <input
@@ -56,8 +56,8 @@ const Init = () => {
       </div>
       
       <div class="form-group">
-        <label>추천인 ID 입력</label>
-        <h5 style={{ color: "green", marginBottom: "2%" }}>{message2}</h5>
+        <label className=".form-lable">추천인 ID 입력</label>
+        <h5 className="form-h5" style={{ color: "green", marginBottom: "2%" }}>{message2}</h5>
         <br />
         사용자 ID:{" "}
         <input
@@ -80,8 +80,8 @@ const Init = () => {
       </div>
 
       <div className="form-group">
-        <label>계정 삭제</label>
-        <h5 style={{ color: "green", marginBottom: "2%" }}>{message3}</h5>
+        <label className=".form-lable">계정 삭제</label>
+        <h5 className="form-h5" style={{ color: "green", marginBottom: "2%" }}>{message3}</h5>
         <br />
         ID:{" "}
         <input
