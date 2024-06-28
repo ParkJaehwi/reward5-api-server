@@ -7,7 +7,6 @@ import { LuUserPlus } from "react-icons/lu";
 import { LuUserX } from "react-icons/lu";
 import { LuUsers } from "react-icons/lu";
 import { MdPayment } from "react-icons/md";
-import { GoGift } from "react-icons/go";
 import { GrMoney } from "react-icons/gr";
 
 function Navigation() {
