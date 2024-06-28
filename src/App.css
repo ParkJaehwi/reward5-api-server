@@ -13,12 +13,27 @@
 }
 
 .main_right{
-  display: flex;
-  float: right;
-  border: 1px solid black;
-  margin: 1vw;
-  height: 82vh;
+  display: inline-flex;
   width: 20vw;
+  margin: 2vw;
+}
+
+.home_memo{
+  margin-left: 3vh;
+  margin-top: 10vw;
+  display: inline-block;
+  width: 20vw;
+  height: 50%; 
+  vertical-align: top; 
+  text-align: center;
+}
+
+.home_memo h1{
+  font-size: 40px;
+}
+.home_memo h4{
+  font-size: 30px;
+  color: #8878de;
 }
 
 .form-container {
@@ -27,25 +42,24 @@
   justify-content: center;
   align-items: center;
 }
-
+ 
 .form-group {
-  width: 500px;
+  width: 30vw;
   padding: 20px;
-  border: 1px solid #ddd;
   border-radius: 8px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  background-color: rgb(241, 241, 241);
-  margin-left: 73vh;
+  margin: 2vh;
+  margin-left: 50vh;
 }
 
-.form-lable {
+.form-group label {
   font-size: 1.5em;
   margin-bottom: 10px;
   display: block;
   text-align: center;
 }
 
-.form-h5{
+.form-group h5 {
   text-align: center;
 }
 
@@ -53,7 +67,7 @@
   width: 100%;
   padding: 10px;
   margin: 10px 0;
-  border: 1px solid #ccc;
+  border: 1px solid #cacaca;
   border-radius: 4px;
   box-sizing: border-box;
 }
@@ -61,7 +75,7 @@
 .btn {
   width: 100%;
   padding: 10px;
-  background-color: #8878de;
+  background-color: #8878DE;
   border: none;
   color: white;
   border-radius: 4px;
@@ -70,10 +84,26 @@
 }
 
 .btn:hover {
-  background-color: #6b48f7;
+  background-color: #6a5eb0;
 }
 
+.admin-container {
+  border: 1px solid black;
+  display: flex;
+  flex-direction: column; 
+  justify-content: center;
+  align-items: center;
+  float: left;
+}
+
+.admin-main,
+.admin-footer {
+  width: 15vw;
+  padding: 20px;
+  border-bottom: 0.01vh solid rgb(170, 170, 170);
+}
 .admin-bt{
+  width: 15vw;
   padding: 1px;
   background-color: #8878de;
   border: none;
@@ -81,4 +111,9 @@
   border-radius: 4px;
   cursor: pointer;
   font-size: 1em;
+}
+.post{
+  width: 75vw;
+  display: inline-block;
+  vertical-align: top; /* Ensure it aligns with the home_right element */
 }
