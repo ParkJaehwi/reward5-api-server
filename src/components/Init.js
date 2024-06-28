@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { init, recommender, deleteAccount } from "../services/api";
+import "../App.css"
 
 const Init = () => {
   const [a, setA] = useState("");
@@ -38,6 +39,7 @@ const Init = () => {
 
   return (
     <>
+    <div className="form-container">
       <div className="form-group">
         <label>회원가입</label>
         <h5 style={{ color: "green", marginBottom: "2%" }}>{message1}</h5>
@@ -65,7 +67,7 @@ const Init = () => {
           value={myId}
           onChange={(e) => setMyid(e.target.value)}
         />
-        <br />
+        
         추천인 ID:{" "}
         <input
           className="form-control"
@@ -74,7 +76,6 @@ const Init = () => {
           value={yourId}
           onChange={(e) => setYourid(e.target.value)}
         />
-        <br />
         <input id="recommender" type="submit" value="추천인 등록" class="btn btn-primary" onClick={_onClick2} />
       </div>
 
@@ -92,8 +93,10 @@ const Init = () => {
         />
         <input type="submit" value="계정 삭제" className="btn btn-primary" onClick={_onClick3} />
       </div>
+    </div>
     </>
   );
 };
 
 export default Init;
+

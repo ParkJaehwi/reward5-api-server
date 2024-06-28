@@ -6,6 +6,7 @@ import { queryAll } from "./services/api";
 import Admin from "./components/Admin";
 import Admin_page from "./components/Admin_page";
 import Init from "./components/Init";
+import Recommender from "./components/Recommender"
 import Payment from "./components/Payment";
 import Gift from "./components/Gift";
 import Lotto from "./components/Lotto";
@@ -38,6 +39,7 @@ function App() {
         <div className="content">
           <Routes>
             <Route path="/" element={<Init />} />
+            <Route path="/recommender" element={<Recommender />} />
             <Route path="/payment" element={<Payment />} />
             <Route path="/gift" element={<Gift />} />
             <Route path="/lotto" element={<Lotto data={data} />} />
