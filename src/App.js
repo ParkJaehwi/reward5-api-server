@@ -18,7 +18,6 @@ function App() {
 
   return (
     <div className="App">
-      <div className="main_left">
         <Navigation/>
         <div className="content">
           <Routes>
@@ -30,7 +29,6 @@ function App() {
             <Route path="/refund" element={<Refund />} />
           </Routes>
         </div>
-      </div>
       <div className="main_right">
         <Admin adminFee={adminFee} userPoint={userPoint} totalLotto={totalLotto}></Admin>
       </div>
