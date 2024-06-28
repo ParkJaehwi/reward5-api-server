@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import "./Navigation.css"
-import logo from "./logo.png"
+import logo from "./img/logo.png"
 
 import { LuUserPlus } from "react-icons/lu";
 import { LuUserX } from "react-icons/lu";
@@ -13,10 +13,10 @@ function Navigation() {
   return (
     
     <div className="navigation">
-        <img src={logo} className='logo'></img>
+        <Link to="/" className='logoLink'><img src={logo} className='logo'/></Link>
         <ul>
             <li>
-                <Link to="/" className="navi"><LuUserPlus className='n_icon'/>계정</Link>
+                <Link to="/init" className="navi"><LuUserPlus className='n_icon'/>계정</Link>
             </li>
             <li>
                 <Link to="/payment" className="navi"><LuUsers className='n_icon'/>결제</Link>

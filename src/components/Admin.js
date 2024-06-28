@@ -2,8 +2,7 @@ import React, { useEffect, useState } from "react";
 
 function Admin({ adminFee, data, totalLotto }) {
   return (
-    <div className="admin-container">
-      
+    <div className="form-container">
       <main className="admin-main">
         <div>
           <h2>회원 현재 정보</h2>
@@ -25,11 +24,7 @@ function Admin({ adminFee, data, totalLotto }) {
           return item.Key === "lotto" ? item.Record : null;
         })}
         원
-        <br />
-        Lotto참여자:{" "}
-        {data.map((item, index) => {
-          return item.Key === "participants" ? item.Record + ", " : null;
-        })}
+
       </footer>
     </div>
   );

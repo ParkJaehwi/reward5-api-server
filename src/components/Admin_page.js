@@ -42,6 +42,11 @@ const Admin_page = ({data}) => {
               return item.Key === "admin" ? item.Record : null;
             })}
             원
+            <br />
+            Lotto참여자:{" "}
+            {data.map((item, index) => {
+              return item.Key === "participants" ? item.Record + ", " : null;
+            })}
           </header>
         </>
         

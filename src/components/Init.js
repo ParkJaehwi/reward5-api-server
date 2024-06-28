@@ -37,7 +37,7 @@ const Init = () => {
   };
 
   return (
-    <>
+    <div className="form-container">
       <div className="form-group">
         <label>회원가입</label>
         <h5 style={{ color: "green", marginBottom: "2%" }}>{message1}</h5>
@@ -92,7 +92,7 @@ const Init = () => {
         />
         <input type="submit" value="계정 삭제" className="btn btn-primary" onClick={_onClick3} />
       </div>
-    </>
+    </div>
   );
 };
 
