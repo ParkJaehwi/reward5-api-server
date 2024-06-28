@@ -8,3 +8,15 @@
 .App {
   font-family: 'Pretendard-Regular';
 }
+.content{
+  display: inline-flex;
+}
+
+.main_right{
+  display: flex;
+  float: right;
+  border: 1px solid black;
+  margin: 1vw;
+  height: 82vh;
+  width: 20vw;
+}
