@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 
 function Admin({ adminFee, data, totalLotto }) {
 
-  
+
   return (
     <div className="admin-container">
       
@@ -27,11 +27,7 @@ function Admin({ adminFee, data, totalLotto }) {
           return item.Key === "lotto" ? item.Record : null;
         })}
         원
-        <br />
-        Lotto참여자:{" "}
-        {data.map((item, index) => {
-          return item.Key === "participants" ? item.Record + ", " : null;
-        })}
+        
       </footer>
     </div>
   );
