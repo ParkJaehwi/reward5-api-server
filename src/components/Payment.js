@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { paymentAB } from "../services/api";
+import { payment } from "../services/api";
 
 function Payment() {
   const [id, setId] = useState("");
@@ -9,10 +9,8 @@ function Payment() {
 
   const _onClick = async () => {
     try {
-      const response = await Payment({ id, price, point });
-      console.log(response);
-      setMessage(response.data === "" ? `'${id}'님이 ${point}를 사용하여 총 ${price}원 결제완료` : "중복된 ID입니다");
-      console.log(response.data);
+      const response = await payment({ id, price, point });
+      setMessage(response.data === "" ? `'${id}'님이 ${point}P를 사용하여 총 ${price}원 결제완료` : "중복된 ID입니다");
     } catch (error) {
       setMessage("에러 발생");
     }
@@ -50,7 +48,7 @@ function Payment() {
           value={point}
           onChange={(e) => setPoint(e.target.value)}
         />
-        <input id="paymentAB" type="submit" value="Invoke" class="btn btn-primary" onClick={_onClick} />
+        <input id="PaymentAB" type="submit" value="결제" class="btn btn-primary" onClick={_onClick} />
       </div>
     </div>
   );
