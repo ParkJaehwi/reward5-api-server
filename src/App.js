@@ -1,20 +1,16 @@
 import "./App.css";
-import React, { useEffect, useState } from "react";
-import { Link, Route, Routes } from "react-router-dom";
+import { Route, Routes } from "react-router-dom";
 
-import Admin from "./components/Admin";
+
 import Init from "./components/Init";
 import Payment from "./components/Payment";
-import Refund from "./components/Refund";
 import Gift from "./components/Gift";
 import Lotto from "./components/Lotto";
-import Delete from "./components/Delete";
 import Navigation from "./components/Navigation";
+import Admin_page from "./components/Admin_page";
 
 function App() {
-  const [adminFee, setAdminFee] = useState(99999999);
-  const [userPoint, setUserPoint] = useState(852);
-  const [totalLotto, setTotalLotto] = useState(1000000);
+  
 
   return (
     <div className="App">
@@ -23,15 +19,11 @@ function App() {
           <Routes>
             <Route path="/" element={<Init />} />
             <Route path="/payment" element={<Payment />} />
-            <Route path="/delete" element={<Delete />} />
             <Route path="/gift" element={<Gift />} />
             <Route path="/lotto" element={<Lotto />} />
-            <Route path="/refund" element={<Refund />} />
+            <Route path="/admin" element={<Admin_page />} />
           </Routes>
         </div>
-      <div className="main_right">
-        <Admin adminFee={adminFee} userPoint={userPoint} totalLotto={totalLotto}></Admin>
-      </div>
     </div>
   );
 }
