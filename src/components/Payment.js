@@ -10,9 +10,7 @@ function Payment() {
   const _onClick = async () => {
     try {
       const response = await payment({ id, price, point });
-      console.log(response);
       setMessage(response.data === "" ? `'${id}'님이 ${point}P를 사용하여 총 ${price}원 결제완료` : "중복된 ID입니다");
-      console.log(response.data);
     } catch (error) {
       setMessage("에러 발생");
     }

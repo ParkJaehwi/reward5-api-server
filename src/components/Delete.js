@@ -9,7 +9,6 @@ function Delete() {
     try {
       const response = await deleteAccount(id);
       setMessage(response.data === "" ? `"${id}" 님의 계정 삭제가 완료되었습니다.` : "에러");
-      console.log(response.data);
     } catch (error) {
       setMessage("에러 발생");
     }

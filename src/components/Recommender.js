@@ -9,9 +9,7 @@ function Recommender() {
   const _onClick = async () => {
     try {
       const response = await recommender({ myId, yourId });
-      console.log(response);
       setMessage(response.data === "" ? `'${myId}'님이 ${yourId}을 추천인으로 등록했습니다.` : null);
-      console.log(response.data);
     } catch (error) {
       setMessage("에러 발생");
     }

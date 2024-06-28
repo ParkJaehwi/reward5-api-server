@@ -9,7 +9,6 @@ const Init = () => {
     try {
       const response = await init({ a });
       setMessage(response.data === "" ? `"${a}" 님의 회원가입 성공!` : "중복된 ID입니다");
-      console.log(response.data);
     } catch (error) {
       setMessage("에러 발생");
     }

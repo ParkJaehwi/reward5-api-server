@@ -29,7 +29,6 @@ function App() {
         setLoading(false);
       }
     };
-
     fetchData();
   }, [data]);
 
@@ -69,13 +68,13 @@ function App() {
             <Route path="/payment" element={<Payment />} />
             <Route path="/delete" element={<Delete />} />
             <Route path="/gift" element={<Gift />} />
-            <Route path="/lotto" element={<Lotto />} />
+            <Route path="/lotto" element={<Lotto data={data} />} />
             <Route path="/recommender" element={<Recommender />} />
           </Routes>
         </div>
       </div>
       <div className="main_right">
-        <Admin adminFee={adminFee} totalLotto={totalLotto} data={data}></Admin>
+        <Admin data={data}></Admin>
       </div>
     </div>
   );
