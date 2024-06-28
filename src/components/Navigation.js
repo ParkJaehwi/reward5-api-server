@@ -17,16 +17,7 @@ function Navigation() {
         <img src={logo} className='logo'></img>
         <ul>
             <li>
-                <Link to="/" className="navi"><LuUserPlus className='n_icon'/>회원가입</Link>
-            </li>
-            <li>
-                <Link to="/recommender" className="navi"><LuUsers className='n_icon'/>추천인</Link>
-            </li>
-            <li>
                 <Link to="/payment" className="navi"><MdPayment className='n_icon'/>결제</Link>
-            </li>
-            <li>
-                <Link to="/delete" className="navi"><LuUserX className='n_icon'/>삭제</Link>
             </li>
             <li>
                 <Link to="/gift" className="navi"><GoGift className='n_icon'/>
@@ -34,6 +25,15 @@ function Navigation() {
             </li>
             <li>
                 <Link to="/lotto" className="navi"><GrMoney className='n_icon'/>Lotto</Link>
+            </li>
+            <li>
+                <Link to="/" className="navi"><LuUserPlus className='n_icon'/>회원가입</Link>
+            </li>
+            <li>
+                <Link to="/recommender" className="navi"><LuUsers className='n_icon'/>추천인</Link>
+            </li>
+            <li>
+                <Link to="/delete" className="navi"><LuUserX className='n_icon'/>삭제</Link>
             </li>
         </ul>
     </div>
