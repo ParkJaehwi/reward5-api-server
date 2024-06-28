@@ -21,33 +21,7 @@ function App() {
     <div ng-app="application" ng-controller="AppCtrl">
       <div className="App">
       <div className="main_left">
-        <div className="navigation">
-          <ul>
-            <li>
-              <Link to="/">회원가입</Link>
-            </li>
-            /
-            <li>
-              <Link to="/recommender">추천인</Link>
-            </li>
-            /
-            <li>
-              <Link to="/payment">결제</Link>
-            </li>
-            /
-            <li>
-              <Link to="/delete">삭제</Link>
-            </li>
-            /
-            <li>
-              <Link to="/gift">선물</Link>
-            </li>
-            /
-            <li>
-              <Link to="/lotto">Lotto</Link>
-            </li>
-          </ul>
-        </div>
+        <Navigation/>
         <div className="content">
           <Routes>
             <Route path="/" element={<Init />} />
