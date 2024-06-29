@@ -13,12 +13,14 @@ function Admin({ adminFee, data, totalLotto }) {
               item.Key.startsWith("recommended_by_") ? null : (
               <div key={index} className="user_list">
                 <table className="admin_table">
-                  <tr>
-                    <td>ID: </td>
-                    <td className="admin_td">{item.Key}</td>
-                    <td>포인트: </td>
-                    <td>{item.Record}</td>
-                  </tr>
+                  <tbody>
+                    <tr>
+                      <td>ID: </td>
+                      <td className="admin_td">{item.Key}</td>
+                      <td>포인트: </td>
+                      <td>{item.Record}</td>
+                    </tr>
+                  </tbody>
                 </table>
               </div>
             );
