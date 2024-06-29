@@ -6,7 +6,6 @@ function Lotto({ data }) {
   const [message, setMessage] = useState("");
 
   const _onClick1 = async () => {
-    // participants 배열에 id가 있는지 확인
     const participants = data.find((item) => item.Key === "participants");
     if (participants && participants.Record.includes(id)) {
       setMessage("이미 로또에 참여하셨습니다.");
@@ -20,8 +19,6 @@ function Lotto({ data }) {
       setMessage("에러 발생");
     }
   };
-
-  
 
   return (
     <div>

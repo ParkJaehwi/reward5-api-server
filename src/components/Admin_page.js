@@ -3,7 +3,6 @@ import Admin from "./Admin";
 import DrawLotto from './DrawLotto';
 import "../App.css"
 
-// App 컴포넌트
 const Admin_page = ({data}) => {
   const [password, setPassword] = useState('');
   const [isLoggedIn, setIsLoggedIn] = useState(false);

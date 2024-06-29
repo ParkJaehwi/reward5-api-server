@@ -128,7 +128,7 @@
   width: 75vw;
   margin-top: 5vh;
   display: inline-block;
-  vertical-align: top; /* Ensure it aligns with the home_right element */
+  vertical-align: top;
 }
 .post2{
   width: 99.03vw;
