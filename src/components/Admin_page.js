@@ -46,12 +46,13 @@ const Admin_page = ({data}) => {
               원
             </span>
             <label className="admin-bt">Lotto참여자:{" "}</label>
-            {data.map((item, index) => {
-              return item.Key === "participants" ? item.Record + ", " : null;
-            })}
+            <span className='fontsize'>
+              {data.map((item, index) => {
+                return item.Key === "participants" ? item.Record + ", " : null;
+              })}
+            </span>
           </header>
           <DrawLotto />
-          
         </>
         
       )}

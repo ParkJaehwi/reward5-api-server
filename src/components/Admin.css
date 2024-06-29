@@ -16,11 +16,18 @@
   border-bottom: 0.12vw solid #8878DE;
 }
 .admin_p{
-  font-size: 1.4vw;
+  font-size: 1.7vw;
   font-weight: bold;
   padding-bottom: 1vh;
   border-bottom: 0.12vw solid #8878DE;
 }
 .user_list{
-  font-size: 0.8vw;
+  font-size: 0.9vw;
+}
+.admin_table{
+  height: auto;
+  width: 14vw;
+}
+.admin_td{
+  padding-right: 2vw;
 }
