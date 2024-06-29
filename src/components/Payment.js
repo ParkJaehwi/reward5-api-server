@@ -18,7 +18,7 @@ function Payment() {
 
   return (
     <div>
-      <div class="form-group">
+      <div className="form-group">
       <label className="form-lable">결제</label>
         <h5 className=".form-h5" style={{ color: "green", marginBottom: "2%" }}>{message}</h5>
         <span className="fontsize">Me:{" "}</span>

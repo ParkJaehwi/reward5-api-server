@@ -155,7 +155,7 @@ const Init = () => {
       </div>
 
       <div className="form-group">
-        <label className="form-label">추천인 ID 입력</label>
+        <label className="form-lable">추천인 ID 입력</label>
         <h5 className="form-h5">{message2}</h5>
         <span className="fontsize">사용자 ID: </span>
         <input
