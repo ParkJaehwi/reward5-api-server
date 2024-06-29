@@ -54,7 +54,7 @@ const Init = () => {
         <input type="submit" value="회원가입" className="btn btn-primary" onClick={_onClick1} />
       </div>
       
-      <div class="form-group">
+      <div className="form-group">
         <label className="form-lable">추천인 ID 입력</label>
         <h5 className="form-h5">{message2}</h5>
         <span className="fontsize">사용자 ID:{" "}</span>
