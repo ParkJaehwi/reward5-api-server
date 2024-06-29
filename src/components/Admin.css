@@ -1,0 +1,30 @@
+.admin-main, .admin-footer{
+  width: 20vw;
+  padding: 1.3889vw;
+  border-radius: 0.5556vw;
+  box-shadow: 0 0 0.6944vw rgba(0, 0, 0, 0.1);
+  position: relative;
+  top: 5vh;
+  margin-top: 3vh;
+}
+.admin_h{
+  font-size: 1.7vw;
+  padding-bottom: 1vh;
+  border-bottom: 0.12vw solid #8878DE;
+}
+.admin_p{
+  font-size: 1.7vw;
+  font-weight: bold;
+  padding-bottom: 1vh;
+  border-bottom: 0.12vw solid #8878DE;
+}
+.user_list{
+  font-size: 0.9vw;
+}
+.admin_table{
+  height: auto;
+  width: 14vw;
+}
+.admin_td{
+  padding-right: 2vw;
+}

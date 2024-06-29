@@ -1,8 +1,8 @@
-// src/services/api.js
 import axios from "axios";
 
 const api = axios.create({
-  baseURL: "http://192.168.56.102:8001", // 서버 주소 설정
+  baseURL: "http://192.168.56.101:8001",
+  withCredentials: true,
 });
 
 export const init = (data) => api.get(`/init?a=${data.a}`);

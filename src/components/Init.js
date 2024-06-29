@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { init, recommender, deleteAccount } from "../services/api";
+import "../App.css"
 
 const Init = () => {
   const [a, setA] = useState("");
@@ -38,11 +39,11 @@ const Init = () => {
 
   return (
     <>
+    <div className="form-container">
       <div className="form-group">
-        <label>회원가입</label>
-        <h5 style={{ color: "green", marginBottom: "2%" }}>{message1}</h5>
-        <br />
-        ID:{" "}
+        <label className="form-lable">회원가입</label>
+        <h5 className="form-h5">{message1}</h5>
+        <span className="fontsize">ID:{" "}</span>
         <input
           className="form-control"
           type="text"
@@ -53,11 +54,10 @@ const Init = () => {
         <input type="submit" value="회원가입" className="btn btn-primary" onClick={_onClick1} />
       </div>
       
-      <div class="form-group">
-        <label>추천인 ID 입력</label>
-        <h5 style={{ color: "green", marginBottom: "2%" }}>{message2}</h5>
-        <br />
-        사용자 ID:{" "}
+      <div className="form-group">
+        <label className="form-lable">추천인 ID 입력</label>
+        <h5 className="form-h5">{message2}</h5>
+        <span className="fontsize">사용자 ID:{" "}</span>
         <input
           className="form-control"
           type="text"
@@ -65,8 +65,8 @@ const Init = () => {
           value={myId}
           onChange={(e) => setMyid(e.target.value)}
         />
-        <br />
-        추천인 ID:{" "}
+        
+        <span className="fontsize">추천인 ID:{" "}</span>
         <input
           className="form-control"
           type="text"
@@ -74,15 +74,13 @@ const Init = () => {
           value={yourId}
           onChange={(e) => setYourid(e.target.value)}
         />
-        <br />
-        <input id="recommender" type="submit" value="추천인 등록" class="btn btn-primary" onClick={_onClick2} />
+        <input id="recommender" type="submit" value="추천인 등록" className="btn btn-primary" onClick={_onClick2} />
       </div>
 
       <div className="form-group">
-        <label>계정 삭제</label>
-        <h5 style={{ color: "green", marginBottom: "2%" }}>{message3}</h5>
-        <br />
-        ID:{" "}
+        <label className="form-lable">계정 삭제</label>
+        <h5 className="form-h5">{message3}</h5>
+        <span className="fontsize">ID:{" "}</span>
         <input
           className="form-control"
           type="text"
@@ -92,8 +90,10 @@ const Init = () => {
         />
         <input type="submit" value="계정 삭제" className="btn btn-primary" onClick={_onClick3} />
       </div>
+    </div>
     </>
   );
 };
 
 export default Init;
+
