@@ -1,6 +1,6 @@
 import "./App.css";
 import React, { useEffect, useState } from "react";
-import { Link, Route, Routes, useLocation } from "react-router-dom";
+import { Route, Routes, useLocation } from "react-router-dom";
 import { queryAll } from "./services/api";
 
 import Home from "./components/Home";
@@ -14,7 +14,7 @@ import Navigation from "./components/Navigation";
 import Footer from "./components/Footer";
 
 function App() {
-const location = useLocation();
+  const location = useLocation();
   const currentPath = location.pathname;
   const [data, setData] = useState([]);
   const [loading, setLoading] = useState(true);
@@ -35,27 +35,27 @@ const location = useLocation();
   }, [data]);
 
   return (
-      <div className="App">
-        <Navigation/>
-        <div className="content">
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/init" element={<Init />} />
-            <Route path="/payment" element={<Payment />} />
-            <Route path="/gift" element={<Gift />} />
-            <Route path="/lotto" element={<Lotto data={data} />} />
-            <Route path="/admin" element={<Admin_page data={data}/>} />
-          </Routes>
-        </div>
-        <div className="main_right">
-          {currentPath !== "/" && (
+    <div className="App">
+      <Navigation />
+      <div className="content">
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/init" element={<Init />} />
+          <Route path="/payment" element={<Payment />} />
+          <Route path="/gift" element={<Gift />} />
+          <Route path="/lotto" element={<Lotto data={data} />} />
+          <Route path="/admin" element={<Admin_page data={data} />} />
+        </Routes>
+      </div>
+      <div className="main_right">
+        {currentPath !== "/" && (
           <div className="main_right">
             <Admin data={data} />
           </div>
-          )}
-        </div>
-        <Footer/>
+        )}
       </div>
+      <Footer />
+    </div>
   );
 }
 

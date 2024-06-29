@@ -12,7 +12,7 @@ const Gift = () => {
   const _onClick = async () => {
     try {
       const response = await gift({ sender, receiver, amount });
-      setMessage(response.data === "" ? `${receiver}}님에게 포인트 선물 성공!` : null);
+      setMessage(response.data === "" ? `${receiver}님에게 포인트 선물 성공!` : null);
     } catch (error) {
       setMessage("에러 발생");
     }
@@ -22,7 +22,7 @@ const Gift = () => {
     <div className="form-group">
       <label className="form-lable">포인트 선물</label>
       <h5 style={{ color: "green", marginBottom: "2%" }}>{message}</h5>
-      <span className="fontsize">선물 보내는 ID:{" "}</span>
+      <span className="fontsize">선물 보내는 ID: </span>
       <input
         className="form-control"
         type="text"
@@ -30,21 +30,23 @@ const Gift = () => {
         value={sender}
         onChange={(e) => setSender(e.target.value)}
       />
-      <span className="fontsize">선물 포인트:{" "}</span>
-      <input
-        className="form-control"
-        type="text"
-        placeholder="선물할 포인트"
-        value={amount}
-        onChange={(e) => setAmount(e.target.value)}
-      />
-      <span className="fontsize">선물 받을 ID:{" "}</span>
+
+      <span className="fontsize">선물 받을 ID: </span>
       <input
         className="form-control"
         type="text"
         placeholder="받는 ID"
         value={receiver}
         onChange={(e) => setReceiver(e.target.value)}
+      />
+
+      <span className="fontsize">선물 포인트: </span>
+      <input
+        className="form-control"
+        type="text"
+        placeholder="선물할 포인트"
+        value={amount}
+        onChange={(e) => setAmount(e.target.value)}
       />
       <input type="submit" value="포인트 선물하기" className="btn btn-primary" onClick={_onClick} />
     </div>

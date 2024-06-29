@@ -1,22 +1,23 @@
-import React, { useState } from 'react';
+import React, { useState } from "react";
 import Admin from "./Admin";
-import DrawLotto from './DrawLotto';
-import "../App.css"
+import DrawLotto from "./DrawLotto";
+import "../App.css";
 
 // App 컴포넌트
-const Admin_page = ({data}) => {
-  const [password, setPassword] = useState('');
+const Admin_page = ({ data }) => {
+  const [password, setPassword] = useState("");
   const [isLoggedIn, setIsLoggedIn] = useState(false);
-  const [error, setError] = useState('');
+  const [error, setError] = useState("");
+  const [lottoUser, setLottoUser] = useState([]);
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    if (password === '1234') {
+    if (password === "1234") {
       setIsLoggedIn(true);
-      setError('');
+      setError("");
     } else {
       setIsLoggedIn(false);
-      setError('비밀번호가 틀렸습니다');
+      setError("비밀번호가 틀렸습니다");
     }
   };
 
@@ -25,35 +26,35 @@ const Admin_page = ({data}) => {
       {!isLoggedIn ? (
         <form onSubmit={handleSubmit}>
           <div>
-          <label className="form-lable">비밀번호: </label>
-            <input 
+            <label className="form-lable">비밀번호: </label>
+            <input
               className="form-control"
-              type="password" 
+              type="password"
               value={password}
               onChange={(e) => setPassword(e.target.value)}
             />
           </div>
-          <button className="btn btn-primary" type="submit">로그인</button>
+          <button className="btn btn-primary" type="submit">
+            로그인
+          </button>
         </form>
       ) : (
         <>
-        <header className="admin-header">
-            <label className="admin-bt">Admin:{" "}</label>
-            <span className='fontsize'>
+          <header className="admin-header">
+            <label className="admin-bt">Admin: </label>
+            <span className="fontsize">
               {data.map((item, index) => {
                 return item.Key === "admin" ? item.Record : null;
               })}
               원
             </span>
-            <label className="admin-bt">Lotto참여자:{" "}</label>
+            <label className="admin-bt">Lotto참여자: </label>
             {data.map((item, index) => {
               return item.Key === "participants" ? item.Record + ", " : null;
             })}
           </header>
           <DrawLotto />
-          
         </>
-        
       )}
       {error && <p>{error}</p>}
     </div>
