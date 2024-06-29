@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import Admin from "./Admin";
 import DrawLotto from './DrawLotto';
+import "../App.css"
 
 // App 컴포넌트
 const Admin_page = ({data}) => {
@@ -20,29 +21,37 @@ const Admin_page = ({data}) => {
   };
 
   return (
-    <div>
+    <div className="form-group">
       {!isLoggedIn ? (
         <form onSubmit={handleSubmit}>
           <div>
-            <label>비밀번호: </label>
+          <label className="form-lable">비밀번호: </label>
             <input 
+              className="form-control"
               type="password" 
               value={password}
               onChange={(e) => setPassword(e.target.value)}
             />
           </div>
-          <button type="submit">로그인</button>
+          <button className="btn btn-primary" type="submit">로그인</button>
         </form>
       ) : (
         <>
-          <Admin data={data}></Admin><DrawLotto />
-          <header className="admin-header">
-            Admin:{" "}
+        <header className="admin-header">
+            <label className="admin-bt">Admin:{" "}</label>
+            <span className='fontsize'>
+              {data.map((item, index) => {
+                return item.Key === "admin" ? item.Record : null;
+              })}
+              원
+            </span>
+            <label className="admin-bt">Lotto참여자:{" "}</label>
             {data.map((item, index) => {
-              return item.Key === "admin" ? item.Record : null;
+              return item.Key === "participants" ? item.Record + ", " : null;
             })}
-            원
           </header>
+          <DrawLotto />
+          
         </>
         
       )}
